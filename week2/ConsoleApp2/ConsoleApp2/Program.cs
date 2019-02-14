@@ -22,23 +22,23 @@ namespace ConsoleApp2
 
          static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(@"C:\Users\HP\Desktop\input.txt");       // получаем доступк к текстовому файлу ,считываем данные из файла с помощью StreamReader
+            StreamReader sr = new StreamReader(@"C:\Users\HP\Desktop\input.txt");       // получаем доступ к текстовому файлу ,считываем данные из файла с помощью StreamReader
             string s = sr.ReadToEnd();                                                  //     читаем строку в текстовом файле                                                             
             string[] arr = s.Split(' ');                                                // создаем массив и сплитуем пробелами между элементами
             sr.Close();                                                                 //делаем для того чтобы гарантированно закрылась на последней строке
-            StreamWriter sw = new StreamWriter(@"C:\Users\HP\Desktop\output.txt");
-            string res = "";
-            for (int i = 0; i < arr.Length; i++) 
+            StreamWriter sw = new StreamWriter(@"C:\Users\HP\Desktop\output.txt");      //новая переменная sw записывается в новый файл
+            string res = "";                                                            // создаем переменную и присваиваем к этой переменной некую пустоту
+            for (int i = 0; i < arr.Length; i++)                                        // создаем форик и пробегаемся от 0 до длины массива
             {
-                int num = int.Parse(arr[i]);
-                if (prime(num))
+                int num = int.Parse(arr[i]);                                            
+                if (prime(num))                                                         // проверяем число на его прайм 
                 {
-                    res = res + num + " ";
+                    res = res + num + " ";                                              // присваиваем res новые значения
                 }
 
             }
-            sw.Write(res);
-            sw.Close();
-        }
+            sw.Write(res);                                                              // выписываем новые значения res
+            sw.Close();                                                                 // закрываем sw
+        }   
     }
 }
