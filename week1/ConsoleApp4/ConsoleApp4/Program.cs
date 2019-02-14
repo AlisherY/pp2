@@ -10,18 +10,18 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            string s = Console.ReadLine();
-            int n = int.Parse(s);
-            for (int i = 0; i < n; i++)
+            string s = Console.ReadLine();      //вводим строку 
+            int n = int.Parse(s);               //конвертируем string в int
+            for (int i = 0; i < n; i++)         // создаем  двойной массив 
             {
-                for (int j = 0; j <= i; j++) 
+                for (int j = 0; j <= i; j++)
                 {
-                    Console.Write("[*]");
+                    Console.Write("[*]");       //выводим наши символы в виде звезд 
                 }
-                Console.WriteLine();
+                Console.WriteLine();            //консоль для того чтобы перейти на след. строку 
             }
 
-            
+
 
 
         }

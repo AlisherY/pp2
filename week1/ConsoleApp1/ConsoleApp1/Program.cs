@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static bool isPrime(int n)
+        static bool isPrime(int n)  //функция для нахождения простых чисел
         {
             if (n == 1) return false;
             for (int i = 2; i < n; i++)
@@ -19,25 +19,26 @@ namespace ConsoleApp1
         }
         static void Main(string[] args)
         {
-            string s = Console.ReadLine();
-            int n = int.Parse(s);
-            string k = Console.ReadLine();
-            string[] arr = k.Split(' ');
-            int cnt = 0;
-            for (int i = 0; i < arr.Length; i++)
+            string s = Console.ReadLine();         //читаем первую строку 
+            int n = int.Parse(s);                  //конвертируем переменную string в int
+            
+            string k = Console.ReadLine();         //читаем вторую строку
+            string[] arr = k.Split(' ');           //записываем в новый массив удалив пробелы между числами
+            int cnt = 0;                           //начальное кол-во простых чисел                   
+            for (int i = 0; i < arr.Length; i++)   //создаем форик 
             {
-                if (isPrime(int.Parse(arr[i])))
+                if (isPrime(int.Parse(arr[i])))    //проверяем числа на прайм, если так, то  cnt+1
                 {
                     cnt++;
                 }
             }
-            Console.WriteLine(cnt);
-            for (int i = 0; i < arr.Length; i++)
+            Console.WriteLine(cnt);                //вывод кол-во прайм чисел
+            for (int i = 0; i < arr.Length; i++)   // создаем форик для прайм чисел 
             {
-                int num = int.Parse(arr[i]);
-                if (isPrime(num))
+                int num = int.Parse(arr[i]);       // новая переменная равно 
+                if (isPrime(num))                  // если переменная num является числом прайм,то
                 {
-                    Console.Write(num);
+                    Console.Write(num);            // выводим все прайм числа 
                     Console.Write(' ');
                 }
             }
