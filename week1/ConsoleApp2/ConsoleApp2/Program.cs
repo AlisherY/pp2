@@ -15,20 +15,20 @@ namespace ConsoleApp2
         
         public Student (string name, string id)
         {
-            this.name = name;
+            this.name = name;                       //ключевое слово this ссылается на текущий эекземпляр класса ( так как имеется одинаковые имена в этом коде )
             this.id = id;
         }
-        public string getName()
+        public string getName()             //получить Имя студента
         {
             return this.name;
         }
-        public string getId()
+        public string getId()               // получить ID студента
         {
             return this.id;
         }
-       public int Increment()
+       public int Increment()               // то же самое как cnt но увеличиваетс только на 1
         {
-            return ++yearofstudy;
+            return ++yearofstudy;           // возвращает нам год обучения 
         }
 
        
